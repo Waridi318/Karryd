@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<header id="header">
+    <div class="header-top">
+    </div>
+    <div class="container main-menu">
+        <div class="row align-items-center justify-content-between d-flex">
+            <h4 class="text-white">Karryd</h4>
+            <!-- <a href="{% url 'home' %}"><img src="{% static 'img/logo.png' %}" alt="" title="" /></a> -->
+            <nav id="nav-menu-container">
+                <ul class="nav-menu">
+                    <li class="menu-active"><a href=#home>Home</a></li>
+                    <li><a href=#about>About</a></li>
+                    <li><a href=#service>Services</a></li>
+                    <li><a href=#gallery>Gallery</a></li>
+                    <li><a href=#contact>Contact Us</a></li>
+                    {% comment %} <li><a href={% url 'usersignup' %}>Sign-up</a></li>
+                    <li><a href={% url 'userlogin' %}>Log In</a></li>{% endcomment %}
+                    <li><a href="{% url 'userlogout' %}">Log Out</a></li>
+                </ul>
+            </nav><!-- #nav-menu-container -->
+        </div>
+    </div>
+</header><!-- #header -->
+
+<!-- start banner Area -->
+<section class="banner-area relative" id="home">
+    <div class="overlay overlay-bg"></div>
+    <div class="container">
+        <div class="row fullscreen d-flex align-items-center justify-content-between">
+            <div class="banner-content col-lg-6 col-md-6 ">
+                <h6 class="text-white ">Need a hand to carry your luggage? just call</h6>
+                <h1 class="text-uppercase">
+                    0791 999 911
+                </h1>
+                <p class="pt-10 pb-10 text-white">
+                    Whether you are travelling to shagz, or moving your goods from one point to the other, we got you
+                    covered for all your luggage carrying needs.
+                </p>
+                <a href="#" class="primary-btn text-uppercase">Call for Carrier</a>
+            </div>
+            <div class="col-lg-4  col-md-6 header-right">
+                <h4 class="pb-30">Book Your Karryd Online!</h4>
+                <form class="form">
+                    <div class="from-group">
+                        <p class="pt-2 text-black">Your carrier is Peter Musa.</p>
+                        <p class="pt-2 text-black">Carrier is 2 minutes away</p>
+                        <span>
+                            <p class="pt-2 text-black">Amount to pay: 200Ksh</p>
+                        </span>
+                        <p class="pt-2 pb-2 text-black">MPESA Paybill: 0000000</p>
+                        {% comment %}<input class="form-control txt-field" type="text" name="name"
+                            placeholder="Your name" onfocus="this.placeholder = ''"
+                            onblur="this.placeholder = 'Your name'">
+                        <input class="form-control txt-field" type="email" name="email" placeholder="Email address"
+                            onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'">
+                        <input class="form-control txt-field" type="tel" name="phone" placeholder="Phone number"
+                            onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone number'">{% endcomment %}
+                        {% comment %}
+                    </div>
+                    <div class="form-group">
+                        <div class="default-select" id="default-select">
+                            <select>
+                                <option value="" disabled selected hidden>From Destination</option>
+                                <option value="1">Koja</option>
+                                <option value="2">RiverRoad</option>
+                                <option value="3">Odeon Cinema</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="default-select" id="default-select2">
+                            <select>
+                                <option value="" disabled selected hidden>To Destination</option>
+                                <option value="1">Country Bus</option>
+                                <option value="2">Uhuru Park</option>
+                                <option value="3">Afya Centre</option>
+                            </select>
+                        </div>
+                    </div>{% endcomment %}
+                    {% comment %} <div class="form-group">
+                        <div class="input-group dates-wrap">
+                            <label for="datepicker2"></label><input id="datepicker2" class="dates form-control"
+                                placeholder="Date & time" type="text">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><span class="lnr lnr-calendar-full"></span></span>
+                            </div>
+                        </div>
+                    </div>{% endcomment %}
+                    <div class="form-group">
+
+                        <button type="submit" formaction="{% url 'loggedin' %}"
+                            class="btn btn-default btn-lg btn-block text-center text-uppercase">Go to HomePage</button>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End banner Area -->
+{% endblock %}
